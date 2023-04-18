@@ -11,10 +11,25 @@
  
 ## Aufgabe 2
 [[ueb02#Aufgabe 2: Substitutionsmodell: formale/aktuale Parameter]]
+1. `(define (string-sort "b" "a")...)`
+2. 
+```racket
+(cond ((string=? "b" "a") "b") 
+    ((string<? "b" "a") (string-append "b" ", " "a"))
+    (else (string-append "a" ", " "b"))))
+```
+3. 
+```racket
+(cond (#f "b")
+    (#f (string-append "b" ", " "a"))
+    (else (string-append "a" ", " "b"))))
+```
+4. `(string-append "a" ", " "b")`
+5. `"a, b"`
 
 ## Aufgabe 3
 [[ueb02#Aufgabe 3: Arithmetik-freie Prozedurdefinitionen]]
-```
+```racket
 #lang racket
 (define (cut string x y)
   (define result "")
