@@ -15,7 +15,7 @@ ii. `5 × (537 × (98.3 + (37.5 − (2.5 × 153)))) + 255`
 [[loes02#Aufgabe 2]]
 Gegeben seien folgende Definitionen:
 
-```
+```racket
   1   (define (string-sort a b)
   2     (cond ((string=? a b) a)
   3           ((string<? a b) (string-append a ", " b))
@@ -35,7 +35,7 @@ Hinweis: _Nutzen Sie zur Funktionsdefinition die Kurzform von `define` und f�
 ## Aufgabe 4: Substitutionsmodell: Rekursive und iterative Prozesse
 Jede der beiden folgenden Funktionen definiert eine Methode, um zwei positive ganze Zahlen zu addieren:
 
-```
+```racket
   1   (define (a-plus x y)
   2     (if (zero? x)
   3         y
