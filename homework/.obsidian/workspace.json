@@ -6,6 +6,7 @@
       {
         "id": "2b0ea649be09bfb2",
         "type": "tabs",
+        "dimension": 49.080267558528426,
         "children": [
           {
             "id": "3a7e77e536204fc6",
@@ -24,6 +25,7 @@
       {
         "id": "c4413a3a736ba081",
         "type": "tabs",
+        "dimension": 50.919732441471574,
         "children": [
           {
             "id": "798415225679ae63",
@@ -103,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ueb03.md",
+                "file": "loes03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ueb03.md",
+                "file": "loes03.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ueb03.md"
+                "file": "loes03.md"
               }
             }
           }
@@ -164,10 +166,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3a7e77e536204fc6",
+  "active": "798415225679ae63",
   "lastOpenFiles": [
-    "loes03.md",
     "ueb03.md",
+    "loes03.md",
+    "Untitled.md",
+    "ueb03-code/#binom.rkt#2#",
+    "ueb03-code/#binom.rkt#1#",
+    "ueb03-code/binom.rkt~",
+    "ueb03-code/binom.rkt",
+    "ueb03-code/#even-uneven.rkt#1#",
     "ueb02.md",
     "Untitled.canvas",
     "loes02.md",
