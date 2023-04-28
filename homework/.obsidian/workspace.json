@@ -6,7 +6,7 @@
       {
         "id": "2b0ea649be09bfb2",
         "type": "tabs",
-        "dimension": 48.91304347826087,
+        "dimension": 55.434782608695656,
         "children": [
           {
             "id": "3a7e77e536204fc6",
@@ -15,8 +15,8 @@
               "type": "markdown",
               "state": {
                 "file": "ueb03.md",
-                "mode": "source",
-                "source": false
+                "mode": "preview",
+                "source": true
               }
             }
           }
@@ -25,7 +25,7 @@
       {
         "id": "c4413a3a736ba081",
         "type": "tabs",
-        "dimension": 51.08695652173913,
+        "dimension": 44.565217391304344,
         "children": [
           {
             "id": "798415225679ae63",
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "loes03.md",
+                "file": "ueb03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "loes03.md",
+                "file": "ueb03.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "loes03.md"
+                "file": "ueb03.md"
               }
             }
           }
@@ -166,10 +166,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "798415225679ae63",
+  "active": "3a7e77e536204fc6",
   "lastOpenFiles": [
-    "ueb03.md",
     "loes03.md",
+    "ueb03.md",
     "Untitled.md",
     "ueb03-code/#binom.rkt#2#",
     "ueb03-code/#binom.rkt#1#",

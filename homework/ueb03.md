@@ -41,3 +41,43 @@ Skizzieren Sie die Gültigkeitsbereiche für folgende Scheme-Ausdrücke:
 ```
 
 Dabei soll Programmierquelltext als `code` dargestellt werden.
+
+## Aufgabe 4: Rekursion außerhalb des Wertverlaufs
+a) Welche Funktion berechnet das folgende rekursive Definitionsschema?
+
+```
+1 (define (m n)     
+2   (if (> n 100)     
+3       (- n 10)     
+4       (m (m (+ n 11)))))
+```
+
+b) Obwohl es sich hier um keine Wertverlaufsrekursion handelt, terminiert die Berechnung. mit diesem Schema für beliebig vorgegebene natürliche Zahlen. Warum?
+
+c) Finden Sie eine einfache endrekursive (iterative) Definition dieser Funktion?
+
+_Anmerkung: Was ist eine Werteverlaufsrekursion?_
+
+## Aufgabe 5: Primzahlen & Listen
+**Primzahlen** sind natürliche Zahlen, welche nur durch 1 und sich selbst teilbar sind.  
+a.) Schreiben Sie ein Prädikat `prime?`, das für eine vorgegebene natürliche Zahl entscheidet, ob sie eine Primzahl ist. Verwenden Sie dabei ein geeignet definiertes Prädikat `divides?`, welches auf Teilbarkeit testet!
+
+b.) Informieren Sie sich über die [Listen in DrRacket](https://docs.racket-lang.org/reference/pairs.html) und entwerfen Sie eine Funktion `(first-primes n)`, welche eine Liste mit den ersten `n` Primzahlen zurückgibt. Nutzen Sie dazu Ihr Prädikat `prime?`.
+
+c.) Finden Sie eine Optimierung, in der Sie die Zwischenergebnisse ihrer Funktion `(first-primes n)` nutzen können, um die Generierung zu beschleunigen!
+
+## Aufgabe 6:  Fibonaccizahlen
+Die Fibonacci-Zahlenreihe ist eine Sequenz von Zahlen, bei der jede Zahl die Summe der beiden vorhergehenden Zahlen ist. Die ersten beiden Zahlen der Sequenz sind 0 und 1. Mathematisch kann die n-te Fibonacci-Zahl (F(n)) wie folgt definiert werden:
+$$F(n) = F(n-1) + F(n-2)$$
+wobei F(0) = 0 und F(1) = 1.
+
+**Aufgabe:**
+a) Schreiben Sie eine rekursive Funktion `(fib n)` in DrRacket, die die n-te Fibonacci-Zahl berechnet. Um welche Art von Rekursion handelt es sich hierbei?
+
+b) Schreiben Sie eine iterative Variante mit einer Hilfsfunktion in DrRacket, die die n-te Fibonacci-Zahl berechnet. Wie viele Parameter braucht Ihre Hilfsfunktion mindestens?
+
+c) Der Goldene Schnitt ist ein besonderes Verhältnis, das in der Natur, Kunst und Architektur häufig vorkommt. Er kann mithilfe von Fibonacci-Zahlen approximiert werden, indem man aufeinanderfolgende Fibonacci-Zahlen teilt:
+$$\phi \approx \frac{F(n)}{F(n-1)}$$
+wenn `n` groß ist.
+
+Entwickeln Sie eine Funktion `(phi precision)` in DrRacket, die den Goldenen Schnitt mithilfe der zuvor erstellten iterativen Funktion zur Berechnung der Fibonacci-Zahlen auf `precision` Nachkommastellen im Dezimalsystem approximiert. Überlegen Sie sich dabei eine clevere Möglichkeit die Genauigkeit ihrer Approximation zu prüfen. Was fällt ihnen bei der Ausgabe ihrer Ergebnisse auf?
