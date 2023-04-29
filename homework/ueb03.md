@@ -1,9 +1,11 @@
 ## Aufgabe 1: Wechselseitige Rekursion
+[[loes03#Aufgabe 1]]
 Entwerfen Sie Funktionen `(gerade? n)` und `(ungerade? n)` zur Berechnung der entsprechenden Prädikate für natürliche Zahlen. Verwenden Sie dabei neben `gerade?` und `ungerade?` selbst sowie den Wahrheitswerten `#t` und `#f` ausschließlich die Subtraktion und das Prädikat `zero?` (Vergleich mit 0) sowie die Spezialformen `define` und `cond`.
 
 Funktionieren Ihre Funktionen auch für negative ganze Zahlen? Wenn nein, wie müssten Sie diese anpassen?
 
 ## Aufgabe 2: Binomialkoeffizienten
+[[loes03#Aufgabe 2]]
 Für die Binomialkoeffizienten $\binom{n}{k}$ gilt für natürliche Zahlen $n$ und $k$ die folgende Beziehung:
 $$\binom{n}{k} = 
 \begin{cases}
@@ -18,6 +20,7 @@ $$\binom{n}{k} =
 **c)** Was für eine Art von Prozess erzeugt die von Ihnen implementierte Funktion `binom`?
 
 ## Aufgabe 3: Gültigkeitsbereiche
+[[loes03#Aufgabe 3]]
 Skizzieren Sie die Gültigkeitsbereiche für folgende Scheme-Ausdrücke:
 ```racket
 (define small-number 0.00001)
@@ -43,13 +46,14 @@ Skizzieren Sie die Gültigkeitsbereiche für folgende Scheme-Ausdrücke:
 Dabei soll Programmierquelltext als `code` dargestellt werden.
 
 ## Aufgabe 4: Rekursion außerhalb des Wertverlaufs
+[[loes03#Aufgabe 4]]
 a) Welche Funktion berechnet das folgende rekursive Definitionsschema?
 
 ```
-1 (define (m n)     
-2   (if (> n 100)     
-3       (- n 10)     
-4       (m (m (+ n 11)))))
+(define (m n)     
+	(if (> n 100)     
+      (- n 10)     
+      (m (m (+ n 11)))))
 ```
 
 b) Obwohl es sich hier um keine Wertverlaufsrekursion handelt, terminiert die Berechnung. mit diesem Schema für beliebig vorgegebene natürliche Zahlen. Warum?
@@ -59,6 +63,7 @@ c) Finden Sie eine einfache endrekursive (iterative) Definition dieser Funktion?
 _Anmerkung: Was ist eine Werteverlaufsrekursion?_
 
 ## Aufgabe 5: Primzahlen & Listen
+[[loes03#Aufgabe 5]]
 **Primzahlen** sind natürliche Zahlen, welche nur durch 1 und sich selbst teilbar sind.  
 a.) Schreiben Sie ein Prädikat `prime?`, das für eine vorgegebene natürliche Zahl entscheidet, ob sie eine Primzahl ist. Verwenden Sie dabei ein geeignet definiertes Prädikat `divides?`, welches auf Teilbarkeit testet!
 

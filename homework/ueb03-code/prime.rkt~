@@ -1,0 +1,6 @@
+#lang racket
+(define (divides? n k)
+  (cond
+    [(>= n k)(divides? (- n k) k)]
+    [(equal? n 0) #t]
+    [else #f]))
