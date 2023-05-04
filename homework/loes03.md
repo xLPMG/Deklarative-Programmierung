@@ -122,6 +122,40 @@ c)baumartige Rekursion
       (else (sqrt-iter 1 x)))) ;hier verenden wir die lokale funktion sqrt-iter
 ```
 ## Aufgabe 4
+a) verschachtelte Rekursion $\rightarrow$ ein Rekusionsauffruf muss erst auf einen anderen warten
+
+Andere Rekursionsarten:
+f(x) = f(x-1) + f(x-2) $\rightarrow$ Baumrekursion
+f(x) = 1 + f(x-1) $\rightarrow$ Lineare Rekursion
+f(x, y) = f(x-1, y+1) $\rightarrow$ Werteverlaufsrekursion / Iteration / Endrekursion / Restrekursion
+```
+(m 101)
+(if (> 101 100)...) -> #t
+(- 101 10)
+91
+```
+
+```
+(m 100)
+if (> 100 100) -> #f
+(m (m (+ 100 11)))
+(m (m 111))
+if (> 111 100) -> #t
+(m 101)
+if (> 101 100) -> #t
+91
+```
+(m 200) $\rightarrow$ 190
+(m 1000) $\rightarrow$ 990
+
+b) Ein m addiert immer 1, da wir 11 addieren aber nur 10 abziehen.
+c)
+```
+(define (m n)     
+	(if (> n 100)     
+      (- n 10)     
+      (m (+ n 1))))
+```
 ## Aufgabe 5
 [[ueb03#Aufgabe 5: Primzahlen & Listen]]
 a)
@@ -142,6 +176,10 @@ a)
       [else (helper (- k 1))]))
   (helper (- n 1))
   )
+```
+
+Implementierung aus Übung:
+```
 ```
 
 ## Aufgabe 6

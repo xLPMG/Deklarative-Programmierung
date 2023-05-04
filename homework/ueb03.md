@@ -49,14 +49,14 @@ Dabei soll Programmierquelltext als `code` dargestellt werden.
 [[loes03#Aufgabe 4]]
 a) Welche Funktion berechnet das folgende rekursive Definitionsschema?
 
-```
+```racket
 (define (m n)     
 	(if (> n 100)     
       (- n 10)     
       (m (m (+ n 11)))))
 ```
 
-b) Obwohl es sich hier um keine Wertverlaufsrekursion handelt, terminiert die Berechnung. mit diesem Schema für beliebig vorgegebene natürliche Zahlen. Warum?
+b) Obwohl es sich hier um keine Wertverlaufsrekursion handelt, terminiert die Berechnung. Mit diesem Schema für beliebig vorgegebene natürliche Zahlen. Warum?
 
 c) Finden Sie eine einfache endrekursive (iterative) Definition dieser Funktion?
 
