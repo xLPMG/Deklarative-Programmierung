@@ -150,11 +150,16 @@ if (> 101 100) -> #t
 
 b) Ein m addiert immer 1, da wir 11 addieren aber nur 10 abziehen.
 c)
-```
-(define (m n)     
-	(if (> n 100)     
-      (- n 10)     
-      (m (+ n 1))))
+```racket
+  (define (m_iter n)
+  (if (> n 100)
+      (- n 10)
+      (m_iter (+ n 1))))
+
+(define (m_fast n)
+  (if (> n 100)
+      (- n 10)
+      91))
 ```
 ## Aufgabe 5
 [[ueb03#Aufgabe 5: Primzahlen & Listen]]
@@ -179,9 +184,54 @@ a)
 ```
 
 Implementierung aus Übung:
+```racket
+(define (prime? n)  
+  (define (divides? m)
+    (cond [(> m (sqrt n)) #t]
+          [(zero? (modulo n m))#f]
+          [else (divides? (+ m 1))]))
+  (if (<= n 1) #f (divides? 2)))
 ```
-```
+b)
+Hinweise zu Listen: 
+- (list x y z) Erzeugt die Liste '(x y z), die leere Liste wäre '()
+- (cons x y) erzeugt das geordnete Paar (x . y), Listen sind über geordnete Paare implementiert, die Liste '(x y z) ist in Wahrheit die Verkettung der Paare (x . (y . (z . '())))
+- (append lst1 lst2) fügt die elemente der Listen lst1 und lst2 in eine neue Liste zusammen 
+- (car lst) gibt das erste Element der Liste lst zurück, (cdr lst) die Restliste nach dem ersten Element
+- (length lst) gibt die Länge der Liste lst zurück
 
+```racket
+(define (first-primes n)
+  (define (firstph lst k)
+    (cond ((= (length lst) n) lst)
+          ((prime? k) (firstph (append lst (list k)) (+ 1 k)))
+          (else (firstph lst (+ 1 k))))
+    )
+  (firstph '() 2)) ; null ist auch als leere Liste möglich
+```
+c) 
+Optimierungen:
+- Nutzen der Liste der bereits erzeugten Primzahlen um die Teilbarkeit nur durch Primzahlen zu prüfen
+-   nur ungerade Zahlen überprüfen
+- Hinweis: Beginn mit nicht leerer Liste, da sonst (car lst) einen Zugriffsfehler erzeugt
+```racket
+(define (first-primes-fast n)
+  (define (prime? n lst) 
+    (define (divides? lst)
+      (define m (car lst))
+      (cond [(> m (sqrt n)) #t]
+            [(zero? (modulo n m))#f]
+            [else (divides? (cdr lst))]))
+    (if (<= n 1) #f (divides? lst)))
+  (define (firstph lst k)
+    (cond ((= (length lst) n) lst)
+          ((prime? k lst) (firstph (append lst (list k)) (+ 2 k)))
+          (else (firstph lst (+ 2 k))))
+    )
+  (if (<= n 0)
+      '()
+      (firstph '(2) 3)))
+```
 ## Aufgabe 6
 [[ueb03#Aufgabe 6: Fibonaccizahlen]]
 a)
@@ -207,3 +257,36 @@ b)
       (fib-iter (+ a b) a (- count 1))))
 ```
 3 Parameter: ein Zähler der Iteration, die aktuelle Fibonacci-Zahl & die vorhergehende
+
+Implementierung aus Übung:
+```racket
+(define (fibi n)
+  (define (fib-iter a b count)
+    (if (= count 1)
+        a
+        (fib-iter (+ a b) a (- count 1))))
+  (fib-iter 1 0 n))
+```
+c)
+Um nach beliebiger Präzision zu berechnen, brauchen wir eine Approximation. Das Verhältnis der Fibonaccizahlen nährt sich alternierend an den Grenzwert an, weswegen wir die Differenz zweier Folgeglieder nehmen können um eine obere Schranke für die Präzision zu bestimmen.
+```racket
+(define (phi precision)
+  (define (fibi n)
+    (define (fib-iter a b count)
+      (if (= count 1)
+          a
+          (fib-iter (+ a b) a (- count 1))))
+    (fib-iter 1 0 n))
+  (define (phi-approx n)
+    (/ (fibi (+ n 1)) (fibi n)))
+  (define (phi-approx-iter n old-approx)
+    (define new-approx (phi-approx n))
+      (if (< (abs (- new-approx old-approx)) (expt 10 (- precision)))
+          new-approx
+          (phi-approx-iter (+ n 1) new-approx)))
+  (/ (round (* (phi-approx-iter 1 0)
+               (expt 10 precision)))
+     (expt 10 precision)))
+```
+- erst Phi approximieren
+- dann über die differenzen der Approximationen iterativ den Error bestimmen, bis unterhalb der gefragten Präzision

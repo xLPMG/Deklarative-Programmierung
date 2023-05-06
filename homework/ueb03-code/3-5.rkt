@@ -1,0 +1,66 @@
+#lang racket
+; a)
+; Primzahlen berechnen: Jede kleinere Zahl teilt diese Zahl nicht
+; Teilbarkeit mit modulo, remainder überprüfbar
+; Tobias Implementation:
+(define (divides? n m)
+  (cond [(> m (sqrt n)) (format "~a ist eine Primzahl" n)]
+        [(zero? (modulo n m)) (format "~a ist keine Primzahl" n)]
+        [else (divides? n (+ m 1))]))
+(define (prime_tobias n)
+  (if (<= n 1) (format "~a ist eine keine Primzahl" n) (divides? n 2)))
+
+; Beispielaufruf
+(prime_tobias 23)
+(prime_tobias 27)
+(prime_tobias (- (expt 2 61) 1) ; Mersenne Prime Number
+
+; Geklaut von Tobias mit leichten Abänderungen für lokale Definition von divides?
+(define (prime? n)  
+  (define (divides? m)
+    (cond [(> m (sqrt n)) #t]
+          [(zero? (modulo n m))#f]
+          [else (divides? (+ m 1))]))
+  (if (<= n 1) #f (divides? 2)))
+
+; b) Hier verwenden wir die Listen operationen
+; Hinweise zu Listen: 
+; (list x y z) Erzeugt die Liste '(x y z), die leere Liste wäre '()
+; (cons x y) erzeugt das geordnete Paar (x . y), Listen sind über geordnete Paare implementiert, die Liste '(x y z) ist in Wahrheit die Verkettung der Paare (x . (y . (z . '())))
+; (append lst1 lst2) fügt die elemente der Listen lst1 und lst2 in eine neue Liste zusammen 
+; (car lst) gibt das erste Element der Liste lst zurück, (cdr lst) die Restliste nach dem ersten Element
+; (length lst) gibt die Länge der Liste lst zurück
+; Lösung zu b)
+(define (first-primes n)
+  (define (firstph lst k) ; definieren einer iterativen Hilfsfunktion
+    (cond ((= (length lst) n) lst)
+          ((prime? k) (firstph (append lst (list k)) (+ 1 k)))
+          (else (firstph lst (+ 1 k))))
+    )
+  (firstph '() 2)) ; null ist auch als leere Liste möglich
+
+; c) Wir können lediglich die Erzeugung der Liste der ersten n Primzahlen schneller machen
+(define (first-primes-fast n)
+  (define (prime? n lst) ; nutzen die Liste der bereits erzeugten Primzahlen um die Teilbarkeit nur durch Primzahlen zu prüfen!
+    (define (divides? lst)
+      (define m (car lst))
+      (cond [(> m (sqrt n)) #t]
+            [(zero? (modulo n m))#f]
+            [else (divides? (cdr lst))]))
+    (if (<= n 1) #f (divides? lst)))
+  ; Wir überprüfen nur ungerade Zahlen
+  (define (firstph lst k)
+    (cond ((= (length lst) n) lst)
+          ((prime? k lst) (firstph (append lst (list k)) (+ 2 k)))
+          (else (firstph lst (+ 2 k))))
+    )
+  ; Müssen mit nicht leerer Liste anfangen, da wir sonst bei (car lst) einen Zugriffsfehler erzeugen
+  (if (<= n 0)
+      '()
+      (firstph '(2) 3)))
+
+; Testen, alte gegen neue Methode:
+"old, for 20000 first primes:"
+(time (first-primes 20000) (void))
+"new, for 20000 first primes:"
+(time (first-primes-fast 20000) (void))

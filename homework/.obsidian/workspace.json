@@ -4,36 +4,36 @@
     "type": "split",
     "children": [
       {
-        "id": "2b0ea649be09bfb2",
+        "id": "c4413a3a736ba081",
         "type": "tabs",
-        "dimension": 45.05571030640669,
+        "dimension": 47.90969899665552,
         "children": [
           {
-            "id": "3a7e77e536204fc6",
+            "id": "da8c7ccd6f63a0ab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ueb03.md",
-                "mode": "preview",
-                "source": true
+                "file": "ueb04.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
         ]
       },
       {
-        "id": "c4413a3a736ba081",
+        "id": "cfc39dc47c3a1f5e",
         "type": "tabs",
-        "dimension": 54.94428969359332,
+        "dimension": 52.090301003344486,
         "children": [
           {
-            "id": "798415225679ae63",
+            "id": "cf69b8604b59da2f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "loes03.md",
+                "file": "loes04.md",
                 "mode": "source",
                 "source": false
               }
@@ -84,6 +84,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "d067c4342e9c4508",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -105,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ueb03.md",
+                "file": "ueb04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ueb03.md",
+                "file": "ueb04.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ueb03.md"
+                "file": "ueb04.md"
               }
             }
           }
@@ -166,23 +174,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3a7e77e536204fc6",
+  "active": "da8c7ccd6f63a0ab",
   "lastOpenFiles": [
-    "loes03.md",
+    "ueb04.md",
+    "loes04.md",
+    "Untitled.canvas",
+    "2023-05-06.md",
     "ueb03.md",
+    "loes03.md",
+    "ueb03-code/3-5.rkt~",
+    "ueb03-code/#3-5.rkt#1#",
+    "ueb03-code/3-4.rkt",
+    "ueb03-code/3-5.rkt",
+    "ueb03-code/3-6.rkt",
     "ueb03-code/fibonacci_iterative.rkt",
     "ueb03-code/#fibonacci.rkt#1#",
     "ueb03-code/fibonacci.rkt",
     "ueb03-code/Do_3_1.rkt",
     "ueb03-code/Do_3_2.rkt",
-    "ueb03-code/Do+Fr_3-3.rkt",
-    "ueb03-code/#prime.rkt#1#",
-    "ueb03-code/#prime.rkt#2#",
-    "ueb03-code/prime.rkt~",
-    "ueb03-code/prime.rkt",
-    "Untitled.md",
     "ueb02.md",
-    "Untitled.canvas",
     "loes02.md",
     "loes01.md",
     "ueb01.md"
