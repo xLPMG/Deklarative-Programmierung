@@ -86,3 +86,60 @@ $$\phi \approx \frac{F(n)}{F(n-1)}$$
 wenn `n` groß ist.
 
 Entwickeln Sie eine Funktion `(phi precision)` in DrRacket, die den Goldenen Schnitt mithilfe der zuvor erstellten iterativen Funktion zur Berechnung der Fibonacci-Zahlen auf `precision` Nachkommastellen im Dezimalsystem approximiert. Überlegen Sie sich dabei eine clevere Möglichkeit die Genauigkeit ihrer Approximation zu prüfen. Was fällt ihnen bei der Ausgabe ihrer Ergebnisse auf?
+
+## Aufgabe 7:  Programme ≡ Daten
+Listen werden über geordnete Paare implementiert, wobei immer das erste Element eines geordneten Paares die Daten enthält, und der 2. Teil jeweils das nächste geordnete Paar. Beispiel: `(1 (2 3) 4)` entspricht `(1 . ((2 . (3 .'())) (4 . '()))`.  
+Eine beispielhafte Kästchen-Zeigerdarstellung ist als Datei angehängt.
+![[KästchenZeiger.PNG|300]]
+
+**Gegeben sei die Funktion `(define (abs x) (cond ((>= x 0) x) (else (- x))))`.**
+
+a) Fassen Sie die Funktionsdefinition als Liste auf und geben Sie für diese Liste eine entsprechende Kästchen-Zeiger-Darstellung an!
+
+b) Mit welcher Kombination von `car` und `cdr` lässt sich aus dieser Liste extrahieren:  
+- das erste Vorkommen von x (als formaler Parameter der Funktion)  
+- das letzte Vorkommen von x (als Teil des Rückgabewertes im else-Fall)
+
+## Aufgabe 8: Rekursives Rätselraten
+a) Welche Funktion wird durch das folgende Rekursionsschema definiert:
+
+    1 (define (mystery b)
+    2   (if (= b 0)
+    3       '()
+    4       (if (= (remainder b 2) 0)
+    5           (cons 0 (mystery (/ b 2)))
+    6           (cons 1 (mystery (floor (/ b 2)))))))
+
+b) Welche Funktion wird durch das folgende sehr ähnliche Rekursionsschema definiert?:
+
+    1 (define (mystery2 a b)
+    2   (if (= b 0)
+    3       0
+    4       (if (= (remainder b 2) 0)
+    5           (mystery2 (+ a a) (/ b 2))
+    6           (+ a (mystery2 (+ a a) (floor (/ b 2)))))))
+
+c) Nun hat sich noch eine dritte ähnliche Funktion gefunden, was könnte diese Funktion tun?
+
+    1 (define (mystery3 a b)
+    2   (if (= b 0)
+    3       '()
+    4       (if (= (remainder b 2) 0)
+    5           (cons a (mystery3 (+ a a) (/ b 2)))
+    6           (append (mystery3 (+ a a) (floor (/ b 2))) (list a)))))
+
+d) Kombinieren Sie die Ergebnisse aus 'mystery2' und 'mystery3' so, dass aus Ihnen das Ergebnis von 'mystery' folgt!
+
+## Aufgabe 9: Collatz-Folge
+**Collatzfolgen** (auch als Hagelschlagzahlen bezeichnet) ergeben sich dadurch, dass für eine beliebige natürliche Zahl `n` die folgenden Regeln angewandt werden:
+$$f(n) = \begin{cases}
+      \frac{n}{2}, & \text{für }\ n \text{ gerade}\\
+      3n + 1, & \text{für }\ n \text{ ungerade}\\
+\end{cases}$$
+Sobald in dieser Folge eine Zahl doppelt vorkommt, endet sie!
+
+a) Schreiben Sie eine Funktion `(collatz n)` welche für natürliche Zahlen `n` die Collatzfolge beginnend mit n als Liste zurückgibt.
+
+b) Schreiben Sie eine Funktion `(b_collatz n)` die für natürliche Zahlen `n` die längste Collatzfolge für alle natürliche Zahlen die kleiner oder gleich `n` sind zurückgibt.
+
+c) Finden sie sinnvolle Optimierungen, um die Berechnung in b) zu beschleunigen?
