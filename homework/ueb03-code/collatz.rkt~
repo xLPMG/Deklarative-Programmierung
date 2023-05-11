@@ -1,0 +1,9 @@
+#lang racket
+(define (collatz n)
+  (define (chelp lst n)
+        (cond
+          [(member n lst) lst]
+          [(even? n)(chelp (append lst (list n)) (/ n 2))]
+          [else (chelp (append lst (list n)) (+ (* 3 n) 1))])
+    )
+  (chelp '() n))

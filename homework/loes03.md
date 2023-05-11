@@ -290,3 +290,57 @@ Um nach beliebiger Präzision zu berechnen, brauchen wir eine Approximation. Das
 ```
 - erst Phi approximieren
 - dann über die differenzen der Approximationen iterativ den Error bestimmen, bis unterhalb der gefragten Präzision
+## Aufgabe 7
+![[3-7.jpg]]
+
+b)
+```racket
+#lang racket
+(define lst '(define (abs x) (cond ((>= x 0) x) (else (- x)))))
+```
+
+`(car (cdr (car (cdr lst))))
+Output: 'x
+`(car(cdr(car(cdr(car(cdr(cdr(car(cdr(cdr lst))))))))))
+Output: 'x
+
+## Aufgabe 8
+a) Umwandlung einer Dezimalzahl in eine Binärzahl
+```
+mystery 13
+13 / 2 -> Rest 1 -> else -> Liste: 1 (mystery 6)
+mystery 6: b !0 -> Rest 0 -> Liste: 1 0 (mystery 3)
+mystery 3: b !0 -> Rest 1 -> else -> Liste 1 0 1 (mystery 1)
+mystery 1: b !0 -> Rest 1 -> else -> Liste 1 0 1 1 (mystery 0)
+-> b = 0 : 1 0 1 1
+```
+-> normale Rekursion, nicht end-rekursiv
+b) Multiplikation von a und b
+c) a wird binär interpretiert. Für jede Stelle von a wird b schrittweise mit 2 multipliziert. Bei 0 wird das aktuelle b links an die Liste angehangen, bei einer 1 rechts.
+d)xw
+## Aufgabe 9
+[[ueb03#Aufgabe 9: Collatz-Folge]]
+```racket
+#lang racket
+(define (collatz n)
+  (define (chelp lst n)
+        (cond
+          [(member n lst) lst]
+          [(even? n)(chelp (append lst (list n)) (/ n 2))]
+          [else (chelp (append lst (list n)) (+ (* 3 n) 1))])
+    )
+  (chelp '() n))
+```
+
+```racket
+(define (b_collatz n)
+  (define (bchelp n lst)
+    (cond
+      [(<= n 0) lst]
+      [(<= (length (collatz n)) (length lst)) (bchelp (- n 1) lst)]
+      [(> (length (collatz n)) (length lst)) (bchelp (- n 1) (collatz n))]
+      )
+    )
+  (bchelp n '())
+  )
+```

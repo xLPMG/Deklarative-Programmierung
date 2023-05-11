@@ -131,6 +131,7 @@ c) Nun hat sich noch eine dritte ähnliche Funktion gefunden, was könnte diese 
 d) Kombinieren Sie die Ergebnisse aus 'mystery2' und 'mystery3' so, dass aus Ihnen das Ergebnis von 'mystery' folgt!
 
 ## Aufgabe 9: Collatz-Folge
+[[loes03#Aufgabe 9]]
 **Collatzfolgen** (auch als Hagelschlagzahlen bezeichnet) ergeben sich dadurch, dass für eine beliebige natürliche Zahl `n` die folgenden Regeln angewandt werden:
 $$f(n) = \begin{cases}
       \frac{n}{2}, & \text{für }\ n \text{ gerade}\\

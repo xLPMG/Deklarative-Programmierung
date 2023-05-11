@@ -6,14 +6,18 @@
       {
         "id": "c4413a3a736ba081",
         "type": "tabs",
-        "dimension": 53.01003344481605,
+        "dimension": 46.82274247491639,
         "children": [
           {
             "id": "da8c7ccd6f63a0ab",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "ueb03.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -21,7 +25,7 @@
       {
         "id": "cfc39dc47c3a1f5e",
         "type": "tabs",
-        "dimension": 46.98996655518395,
+        "dimension": 53.17725752508361,
         "children": [
           {
             "id": "cf69b8604b59da2f",
@@ -109,6 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "loes03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,6 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "loes03.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +152,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "loes03.md"
+              }
             }
           }
         ]
@@ -166,11 +174,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "da8c7ccd6f63a0ab",
+  "active": "cf69b8604b59da2f",
   "lastOpenFiles": [
     "ueb03.md",
-    "KästchenZeiger.PNG",
     "loes03.md",
+    "ueb03-code/collatz.rkt~",
+    "3-7.jpg",
+    "ueb03-code/collatz.rkt",
+    "KästchenZeiger.PNG",
     "loes04.md",
     "ueb04.md",
     "Untitled.canvas",
@@ -183,8 +194,6 @@
     "ueb03-code/fibonacci_iterative.rkt",
     "ueb03-code/#fibonacci.rkt#1#",
     "ueb03-code/fibonacci.rkt",
-    "ueb03-code/Do_3_1.rkt",
-    "ueb03-code/Do_3_2.rkt",
     "ueb02.md",
     "loes02.md",
     "loes01.md",
