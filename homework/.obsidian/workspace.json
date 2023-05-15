@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ueb03.md",
+                "file": "ueb04.md",
                 "mode": "source",
                 "source": false
               }
@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "loes03.md",
+                "file": "loes04.md",
                 "mode": "source",
                 "source": false
               }
@@ -113,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "loes03.md",
+                "file": "ueb04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "loes03.md",
+                "file": "ueb04.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "loes03.md"
+                "file": "ueb04.md"
               }
             }
           }
@@ -174,16 +174,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cf69b8604b59da2f",
+  "active": "da8c7ccd6f63a0ab",
   "lastOpenFiles": [
+    "ueb04-code/sets.rkt",
+    "ueb04-code",
+    "Neuer Ordner",
     "ueb03.md",
+    "loes04.md",
+    "ueb04.md",
     "loes03.md",
     "ueb03-code/collatz.rkt~",
     "3-7.jpg",
     "ueb03-code/collatz.rkt",
     "KästchenZeiger.PNG",
-    "loes04.md",
-    "ueb04.md",
     "Untitled.canvas",
     "2023-05-06.md",
     "ueb03-code/3-5.rkt~",
@@ -192,8 +195,6 @@
     "ueb03-code/3-5.rkt",
     "ueb03-code/3-6.rkt",
     "ueb03-code/fibonacci_iterative.rkt",
-    "ueb03-code/#fibonacci.rkt#1#",
-    "ueb03-code/fibonacci.rkt",
     "ueb02.md",
     "loes02.md",
     "loes01.md",
