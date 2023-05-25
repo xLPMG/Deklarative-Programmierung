@@ -122,6 +122,7 @@ c)baumartige Rekursion
       (else (sqrt-iter 1 x)))) ;hier verenden wir die lokale funktion sqrt-iter
 ```
 ## Aufgabe 4
+[[ueb03#Aufgabe 4: Rekursion außerhalb des Wertverlaufs]]
 a) verschachtelte Rekursion $\rightarrow$ ein Rekusionsauffruf muss erst auf einen anderen warten
 
 Andere Rekursionsarten:
