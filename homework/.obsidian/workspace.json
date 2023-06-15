@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cfc39dc47c3a1f5e",
+        "id": "1ba2fd1172cb5bf0",
         "type": "tabs",
         "children": [
           {
-            "id": "56babbd6fff5b955",
+            "id": "c764f393295844ab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "loes04.md",
+                "file": "loes05.2.md",
                 "mode": "preview",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "loes04.md",
+                "file": "loes05.2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "loes04.md",
+                "file": "loes05.2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "loes04.md"
+                "file": "loes05.2.md"
               }
             }
           }
@@ -154,28 +154,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "56babbd6fff5b955",
+  "active": "c764f393295844ab",
   "lastOpenFiles": [
-    "Minitest.md",
+    "loes05.md",
+    "loes05.2.md",
+    "ueb05.md",
+    "ueb05.2",
+    "ueb05-code/5-3_Tafel.png",
+    "ueb05-code/5-3.pl",
+    "ueb05-code/5-4-a.pl",
+    "ueb05-code/5-4-b+c.pl",
+    "ueb05-code/5-4-d.pl",
+    "ueb05-code/5-5_Tafel.png",
+    "ueb05-code/5-5.pl",
+    "ueb05-code/n_list.pl",
+    "ueb05-code",
+    "Neuer Ordner",
     "loes04.md",
-    "ueb04.md",
-    "ueb03.md",
     "loes03.md",
+    "ueb04.md",
+    "Minitest.md",
+    "ueb03.md",
     "ueb02.md",
     "ueb04-code/sets.rkt",
-    "ueb04-code",
-    "Neuer Ordner",
-    "ueb03-code/collatz.rkt~",
     "3-7.jpg",
-    "ueb03-code/collatz.rkt",
     "KästchenZeiger.PNG",
     "Untitled.canvas",
     "2023-05-06.md",
-    "ueb03-code/3-5.rkt~",
-    "ueb03-code/#3-5.rkt#1#",
-    "ueb03-code/3-4.rkt",
-    "ueb03-code/3-5.rkt",
-    "ueb03-code/3-6.rkt",
     "loes02.md",
     "loes01.md",
     "ueb01.md"
