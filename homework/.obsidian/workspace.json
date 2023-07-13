@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1ba2fd1172cb5bf0",
+        "id": "93a778babf480001",
         "type": "tabs",
         "children": [
           {
-            "id": "c764f393295844ab",
+            "id": "74bf64c54db093bf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "loes05.2.md",
-                "mode": "preview",
+                "file": "loes06.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "loes05.2.md",
+                "file": "loes06.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "loes05.2.md",
+                "file": "loes06.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "loes05.2.md"
+                "file": "loes06.md"
               }
             }
           }
@@ -154,11 +154,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c764f393295844ab",
+  "active": "74bf64c54db093bf",
   "lastOpenFiles": [
     "loes05.md",
-    "loes05.2.md",
+    "loes04.md",
+    "ueb04.md",
+    "loes03.md",
+    "loes02.md",
+    "Klausur 2022.md",
+    "Klausurvorbereitung.md",
+    "KästchenZeiger.PNG",
+    "ueb01.md",
+    "ueb03.md",
     "ueb05.md",
+    "ueb06.md",
+    "loes06.md",
+    "ueb02.md",
+    "loes01.md",
+    "loes05.2.md",
+    "Minitest.md",
     "ueb05.2",
     "ueb05-code/5-3_Tafel.png",
     "ueb05-code/5-3.pl",
@@ -170,19 +184,9 @@
     "ueb05-code/n_list.pl",
     "ueb05-code",
     "Neuer Ordner",
-    "loes04.md",
-    "loes03.md",
-    "ueb04.md",
-    "Minitest.md",
-    "ueb03.md",
-    "ueb02.md",
     "ueb04-code/sets.rkt",
     "3-7.jpg",
-    "KästchenZeiger.PNG",
     "Untitled.canvas",
-    "2023-05-06.md",
-    "loes02.md",
-    "loes01.md",
-    "ueb01.md"
+    "2023-05-06.md"
   ]
 }
